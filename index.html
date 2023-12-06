@@ -1,0 +1,159 @@
+
+<!-- 3 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Buttons</title>
+    <style>
+        button {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid steelblue;
+            background-color: steelblue;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 300px;
+            height: 300px;
+        }
+        #changeColorButton {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="changeColorButton" onclick="changeButtonColors()">Change Colors</button>
+
+<div id="buttonContainer">
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+</div>
+
+<script>
+    function getRandomColor() {
+        return '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    function changeButtonColors() {
+        const buttons = document.querySelectorAll('#buttonContainer button');
+        buttons.forEach(button => {
+            button.style.backgroundColor = getRandomColor();
+        });
+    }
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- 1 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Color Changer</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="buttonContainer"></div>
+
+<script>
+    function getRandomColor() {
+        return '#' + Math.floor(Math.random()*16777215).toString(16);
+    }
+
+    function changeButtonColor() {
+        this.style.backgroundColor = getRandomColor();
+    }
+
+    for (let i = 1; i <= 20; i++) {
+        const button = document.createElement('button');
+        button.textContent = `Button ${i}`;
+        button.addEventListener('click', changeButtonColor);
+        document.getElementById('buttonContainer').appendChild(button);
+    }
+</script>
+
+</body>
+</html> -->
+
+
+<!-- 2 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Separator Counter</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="buttonContainer"></div>
+
+<script>
+    function getRandomNumber() {
+        const randomNumber = Math.floor(Math.random() * 1000000);
+        return randomNumber.toLocaleString();
+    }
+
+    function countSeparators() {
+        const numberText = this.textContent;
+        const separatorCount = (numberText.match(/,/g) || []).length;
+        alert(`Number of separators in ${numberText}: ${separatorCount}`);
+    }
+
+    for (let i = 1; i <= 20; i++) {
+        const button = document.createElement('button');
+        button.textContent = getRandomNumber();
+        button.addEventListener('click', countSeparators);
+        document.getElementById('buttonContainer').appendChild(button);
+    }
+</script>
+
+</body>
+</html> -->
+
+
+
